@@ -39,13 +39,6 @@ void loop() {
     trangThai = "NHIET DO QUA CAO!";
     canhBao = true;
   }
-  // Kiểm tra độ ẩm (nếu cần cảnh báo độ ẩm thì bỏ comment dòng dưới)
-  // else if (h >= HUMID_HIGH_LIMIT) {
-  //   trangThai = "DO AM QUA CAO!";
-  //   canhBao = true;
-  // }
-
-  // Điều khiển phần cứng (Đèn/Còi)
   if (canhBao) {
     digitalWrite(ALARM_PIN, HIGH); // Bật đèn/còi
   } else {
@@ -60,6 +53,4 @@ void loop() {
   Serial.print("°C | Trang thai: ");
   Serial.println(trangThai);
   
-  // Lưu ý: Bạn cần thêm đoạn code gửi 't' và 'h' lên Firebase ở đây
-  // để Web App nhận được dữ liệu.
 }
